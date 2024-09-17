@@ -1,0 +1,17 @@
+<template>
+  <nuxt-layout>
+    <nuxt-page />
+  </nuxt-layout>
+</template>
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 200ms;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

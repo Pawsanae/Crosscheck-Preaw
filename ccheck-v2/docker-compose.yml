@@ -1,0 +1,23 @@
+version: "3"
+services:
+  ccheck_mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: checkcheck
+      MYSQL_DATABASE: ccheck
+      MYSQL_USER: crosscheck
+      MYSQL_PASSWORD: pwd@2024
+    restart: always
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./backup:/var/lib/mysql
+    ports:
+      - "7077:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: ccheck_mysql
+    ports:
+      - "7078:80"
+    restart: always
