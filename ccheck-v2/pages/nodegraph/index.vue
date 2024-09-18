@@ -140,6 +140,36 @@ const initializeGraph = () => {
   renderer.getMouseCaptor().on('mousedown', () => {
     if (!renderer.getCustomBBox()) renderer.setCustomBBox(renderer.getBBox());
   });
+  
+  renderer.on('downNode', (e) => {
+  // Log the clicked node's ID
+  console.log("Clicked node ID:", e.node);
+
+  const clickedNode = e.node;
+  const clickedNodeAttributes = graph.getNodeAttributes(clickedNode);
+
+  // Create 5 new nodes around the clicked node with different colors
+  const colors = ['#FF0000', '#FFA500', '#FFFF00', '#90EE90', '#008000']; // Red, Orange, Yellow, Light Green, Green
+
+  colors.forEach((color, index) => {
+    const id = uuid();
+    const angle = (index * 2 * Math.PI) / 5; // Spread nodes in a circle around the clicked node
+    const distance = 3; // Distance from the clicked node
+    const newX = clickedNodeAttributes.x + Math.cos(angle) * distance;
+    const newY = clickedNodeAttributes.y + Math.sin(angle) * distance;
+
+    // Add new node
+    graph.addNode(id, {
+      x: newX,
+      y: newY,
+      size: 20,
+      color: color,
+    });
+
+    // Add edge between clicked node and new node
+    graph.addEdge(clickedNode, id);
+  });
+});
 
   //
   // Create node (and edge) by click

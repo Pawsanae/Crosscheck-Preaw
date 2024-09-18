@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ```bash
 # run api
-uvicorn main:app --relaod
+uvicorn main:app --reload
 ```
 # ccheck Set up
 
