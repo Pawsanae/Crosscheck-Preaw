@@ -5,7 +5,7 @@
 
 ```bash
 # venv
-python venv -m .venv
+python -m venv .venv
 
 # activate venv
 .venv\Script\activate
