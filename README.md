@@ -16,7 +16,7 @@ python -m venv .venv
 Must install in venv
 ```bash
 # install requirements
-pip install -r requirements.text
+pip install -r requirements.txt
 ```
 ## Run api
 
