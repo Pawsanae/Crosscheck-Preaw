@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.15.2",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.4",
+    "chartjs-chart-matrix": "^2.0.1",
     "chroma-js": "^3.1.1",
     "d3": "^7.9.0",
     "drizzle-orm": "^0.29.5",
+    "express": "^4.21.0",
     "graphology": "^0.25.4",
     "graphology-layout-force": "^0.2.4",
     "highcharts": "^11.4.3",
@@ -22,6 +26,7 @@
     "sigma": "^3.0.0-beta.29",
     "uuid": "^10.0.0",
     "vue": "^3.4.21",
+    "vue-chartjs": "^5.3.1",
     "vue-router": "^4.3.0",
     "vue-simple-range-slider": "^1.1.0"
   },

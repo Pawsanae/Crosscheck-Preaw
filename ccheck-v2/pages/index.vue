@@ -458,7 +458,8 @@ const propsData = computed(() => {
   <div class="">
     <div class="grid grid-rows-10 grid-cols-6 gap-2 m-3 h-svh">
       <div
-        class="col-start-1 col-span-2 row-start-1 bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg shadow">
+        class="col-start-1 col-span-2 row-start-1 bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 rounded-lg shadow"
+      >
         <div class="">
           <div class="p-3 text-center">
             <h2 class="text-xl">เลือกหลักสูตรที่ 1</h2>
